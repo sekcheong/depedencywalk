@@ -57,12 +57,26 @@ namespace Epic.SystemPulse.AbstractDataType.Graph
 			return v;
 		}
 
-
 		public Edge<TNode, TEdge> AddEdge(Vertex<TNode> v1, Vertex<TNode> v2)
 		{
 			return this.AddEdge(v1, v2, default(TEdge));
 		}
 
+		public Edge<TNode, TEdge> AddEdge(string v1, string v2)
+		{
+			return this.AddEdge(v1, v2, default(TEdge));
+		}
+
+		public Edge<TNode, TEdge> AddEdge(string v1, string v2, TEdge edgeValue)
+		{
+			Vertex<TNode> a = this._vertices[v1];
+			if (a == null) throw new Exception("Vertex '" + v1 + "' does not exist.");
+			
+			Vertex<TNode> b = this._vertices[v2];
+			if (b == null) throw new Exception("Vertex '" + v2 + "' does not exist.");
+
+			return this.AddEdge(a, b, edgeValue);
+		}
 
 		public Edge<TNode, TEdge> AddEdge(Vertex<TNode> v1, Vertex<TNode> v2, TEdge edgeValue)
 		{
@@ -102,12 +116,22 @@ namespace Epic.SystemPulse.AbstractDataType.Graph
 			}
 		}
 
+		
+		public OrderedCollection<string, Vertex<TNode>> Vertices 
+		{
+			get { return _vertices; }
+		}
 
+		public new OrderedCollection<Edge<TNode, TEdge>> Edges
+		{
+			get { return _edges; }
+		}
+
+			//_edges = new OrderedCollection<Edge<TNode, TEdge>>();
 		public Vertex<TNode> GetVertex(string name)
 		{
 			return this.GetVertex(name, false);
 		}
-
 
 		public List<Vertex<TNode>> Select(Vertex<TNode> root, Selection selection)
 		{

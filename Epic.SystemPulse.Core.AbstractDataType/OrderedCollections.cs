@@ -28,6 +28,17 @@ namespace Epic.SystemPulse.AbstractDataType
 			get { return _list[index]; }
 		}
 
+		//protected TValue Get(TKey key)
+		//{
+		//	//return {return _list[
+		//}
+
+		//protected TValue Get(int key)
+		//{
+
+		//	return null;
+		//}
+
 		public bool Contains(TKey key)
 		{
 			return _hash.ContainsKey(key);
