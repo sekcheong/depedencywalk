@@ -194,10 +194,10 @@ namespace depedencywalk
 			try {
 				files = root.GetFiles("*.*");
 			}
-			catch (UnauthorizedAccessException e) {
+			catch (UnauthorizedAccessException) {
 				Trace.TraceError("Unable to access the files in " + root.Name);
 			}
-			catch (DirectoryNotFoundException e) {
+			catch (DirectoryNotFoundException) {
 				Trace.TraceError("Directory not found:" + root.Name);
 			}
 
