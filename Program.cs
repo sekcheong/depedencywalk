@@ -17,6 +17,7 @@ namespace depedencywalk
 			if (string.IsNullOrEmpty(name)) {
 				throw new Exception("Vertex name must be a non empty string.");
 			}
+			
 			this._name = name;
 			this.Data = data;
 		}

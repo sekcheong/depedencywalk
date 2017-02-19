@@ -6,61 +6,48 @@ using System.Threading.Tasks;
 
 namespace Epic.SystemPulse.AbstractDataType.Graph
 {
-	public class Edge<T, E>
+	public class Edge<TVertex, TEdge>
 	{
-		private Vertex<T> _v1;
-		private Vertex<T> _v2;
-		private E _value;
+		private Vertex<TVertex> _u;
+		private Vertex<TVertex> _v;
+		private TEdge _value;
 
-		public Edge(Vertex<T> v1, Vertex<T> v2) : this(v1, v2, default(E)) { }
+		public Edge(Vertex<TVertex> u, Vertex<TVertex> v) : this(u, v, default(TEdge)) { }
 
-		public Edge(Vertex<T> v1, Vertex<T> v2, E value)
+		public Edge(Vertex<TVertex> u, Vertex<TVertex> v, TEdge value)
 		{
-			this._v1 = v1;
-			this._v2 = v2;
+			this._u = u;
+			this._v = v;
 			this._value = value;
 		}
 
-		public Vertex<T> this[int vertex]
+		public Vertex<TVertex> this[int vertex]
 		{
 			get
 			{
-				if (vertex == 0) return this._v1;
-				if (vertex == 1) return this._v2;
+				if (vertex == 0) return this.U;
+				if (vertex == 1) return this.V;
 				return null;
 			}
 		}
 
-
-		public E Value
+		public TEdge Value
 		{
 			get { return this._value; }
 			set { this._value = value; }
 		}
-
-
-		public override bool Equals(object obj)
+		 
+		public virtual bool EquivalentTo(Edge<TVertex, TEdge> other)
 		{
-			Edge<T, E> e = obj as Edge<T, E>;
-			if (e == null) {
-				return false;
-			}
-			else {
-				return this.GetHashCode() == obj.GetHashCode();
-			}
+			return false;
 		}
 
-
-		public override int GetHashCode()
-		{
-			string edge = _v1.Name + "-" + _v2.Name;
-			return edge.GetHashCode();
-		}
-
+		public Vertex<TVertex> U { get { return _u; } }
+		public Vertex<TVertex> V { get { return _v; } }
 
 		public override string ToString()
 		{
-			return "(" + _v1.ToString() + "," + _v2.ToString() + ")";
+			return "(" + this.U.ToString() + "," + this.V.ToString() + ")";
 		}
 	}
 }

@@ -7,12 +7,12 @@ namespace Epic.SystemPulse.AbstractDataType.Graph
 {
 	public class Vertex<N>
 	{
-		private string _name;
+		private string _label;
 		private N _value;
 
-		public Vertex(string name, N value)
+		public Vertex(string label, N value)
 		{
-			this._name = name;
+			this._label = label;
 			this._value = value;
 		}
 
@@ -24,9 +24,9 @@ namespace Epic.SystemPulse.AbstractDataType.Graph
 		}
 
 
-		public string Name
+		public string Label
 		{
-			get { return this._name; }
+			get { return this._label; }
 		}
 
 
@@ -40,13 +40,13 @@ namespace Epic.SystemPulse.AbstractDataType.Graph
 
 		public override int GetHashCode()
 		{
-			return this.Name.GetHashCode();
+			return this.Label.GetHashCode();
 		}
 
 
 		public override string ToString()
 		{
-			return this.Name;
+			return this.Label;
 		}
 	}
 }
