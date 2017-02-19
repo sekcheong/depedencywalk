@@ -11,12 +11,9 @@ namespace Chrono.Core.AbstractDataType
 
 		public Set() { }
 
-		
 		public Set(bool readOnly) : this(readOnly, null) { }
-
 		
 		public Set(params T[] items) : this(false, items) { }
-
 		
 		public Set(bool readOnly, params T[] items)			
 		{
