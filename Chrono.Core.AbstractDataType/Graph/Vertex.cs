@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using System.Text;
 
 
-namespace Epic.SystemPulse.AbstractDataType.Graph
+namespace Chrono.Core.AbstractDataType.Graph
 {
-	public class Vertex<N>
+	public class Vertex<T>
 	{
 		private string _label;
-		private N _value;
+		private T _value;
 
-		public Vertex(string label, N value)
+		public Vertex(string label, T value)
 		{
 			this._label = label;
 			this._value = value;
 		}
 
 
-		public N Value
+		public T Value
 		{
 			get { return this._value; }
 			set { this._value = value; }
@@ -32,7 +32,7 @@ namespace Epic.SystemPulse.AbstractDataType.Graph
 
 		public override bool Equals(object obj)
 		{
-			Vertex<N> v = obj as Vertex<N>;
+			Vertex<T> v = obj as Vertex<T>;
 			if (v == null) return false;
 			return v.GetHashCode() == this.GetHashCode();
 		}

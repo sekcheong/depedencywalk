@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Epic.SystemPulse.Core.AbstractDataType
+namespace Chrono.Core.AbstractDataType
 {
 	public class Set<T> : IEnumerable<T> 
 	{

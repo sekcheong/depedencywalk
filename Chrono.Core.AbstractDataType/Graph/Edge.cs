@@ -4,21 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Epic.SystemPulse.AbstractDataType.Graph
+namespace Chrono.Core.AbstractDataType.Graph
 {
 	public class Edge<TVertex, TEdge>
 	{
 		private Vertex<TVertex> _u;
 		private Vertex<TVertex> _v;
 		private TEdge _value;
+		private bool _directed = true;
 
 		public Edge(Vertex<TVertex> u, Vertex<TVertex> v) : this(u, v, default(TEdge)) { }
 
-		public Edge(Vertex<TVertex> u, Vertex<TVertex> v, TEdge value)
+		public Edge(Vertex<TVertex> u, Vertex<TVertex> v, TEdge value) : this(u, v, true, value) { }
+
+		public Edge(Vertex<TVertex> u, Vertex<TVertex> v, bool directed, TEdge value)
 		{
 			this._u = u;
 			this._v = v;
 			this._value = value;
+			this._directed = directed;
 		}
 
 		public Vertex<TVertex> this[int vertex]
@@ -36,7 +40,7 @@ namespace Epic.SystemPulse.AbstractDataType.Graph
 			get { return this._value; }
 			set { this._value = value; }
 		}
-		 
+
 		public virtual bool EquivalentTo(Edge<TVertex, TEdge> other)
 		{
 			return false;

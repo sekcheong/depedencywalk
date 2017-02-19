@@ -281,7 +281,7 @@ namespace depedencywalk
 		{			
 			string dir = @"C:\EpicSource\8.4\DLG-454545\SystemPulse\SystemPulse\Web\Scripts\SystemPulse";
 			try {
-				string[] files = Bundler.SearchScriptFiles(dir, "Epic.SystemPulse");
+				string[] files = Bundler.SearchScriptFiles(dir, "Chrono");
 			}
 			catch (Exception ex) {
 				Trace.TraceError("ERROR:" + ex.Message);

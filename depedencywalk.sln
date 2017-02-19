@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "depedencywalk", "depedencyw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{7E175584-9C4D-45A1-9ED7-6527465118E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epic.SystemPulse.Core.AbstractDataType", "Epic.SystemPulse.Core.AbstractDataType\Epic.SystemPulse.Core.AbstractDataType.csproj", "{A0EB911F-88FE-46F4-87FE-613F1204AE5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chrono.Core.AbstractDataType", "Chrono.Core.AbstractDataType\Chrono.Core.AbstractDataType.csproj", "{A0EB911F-88FE-46F4-87FE-613F1204AE5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-namespace Epic.SystemPulse.Core.AbstractDataType
+
+namespace Chrono.Core.AbstractDataType
 {
 	public class OrderedSet<T> : Set<T>,IEnumerable<T>
 	{
 		private List<T> _items = new List<T>();
 		private bool _itemRemoved = false;
-
 
 		
 		public OrderedSet() { }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Epic.SystemPulse.AbstractDataType
+namespace Chrono.Core.AbstractDataType
 {
 	public class OrderedMap<TKey, TValue> : IEnumerable<TValue>
 	{

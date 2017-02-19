@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Epic.SystemPulse.AbstractDataType;
-using Epic.SystemPulse.AbstractDataType.Graph;
+using Chrono.AbstractDataType;
+using Chrono.AbstractDataType.Graph;
 using System.Diagnostics;
 namespace Tests
 {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 
-namespace Epic.SystemPulse.AbstractDataType.Graph
+namespace Chrono.AbstractDataType.Graph
 {
 
 	public class DirectedGraph<TNode, TEdge>

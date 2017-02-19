@@ -54,9 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Epic.SystemPulse.Core.AbstractDataType\Epic.SystemPulse.Core.AbstractDataType.csproj">
+    <ProjectReference Include="..\Chrono.Core.AbstractDataType\Chrono.Core.AbstractDataType.csproj">
       <Project>{a0eb911f-88fe-46f4-87fe-613f1204ae5a}</Project>
-      <Name>Epic.SystemPulse.Core.AbstractDataType</Name>
+      <Name>Chrono.Core.AbstractDataType</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
